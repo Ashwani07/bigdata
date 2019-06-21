@@ -3,3 +3,7 @@ docker-compose_old.yml
 .ipynb_checkpoints/Learning PySpark-checkpoint.ipynb
 sparkStreaming/credentials.py
 credentials.py
+sparkStreaming/__pycache__/credentials.cpython-37.pyc
+sparkStreaming/.ipynb_checkpoints/StreamingSpark-checkpoint.ipynb
+kafkaStreaming/.ipynb_checkpoints/StreamingKafka-checkpoint.ipynb
+Spark/.ipynb_checkpoints/Learning PySpark-checkpoint.ipynb
