@@ -1,0 +1,5 @@
+docker-compose_old.yml
+.vscode/settings.json
+.ipynb_checkpoints/Learning PySpark-checkpoint.ipynb
+sparkStreaming/credentials.py
+credentials.py
