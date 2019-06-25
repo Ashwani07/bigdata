@@ -24,7 +24,7 @@ find -name kafka-topics.sh
 
 # Get the list of topics (IP can be replaced by zookeeper)
 ./opt/kafka_2.12-2.2.1/bin/kafka-topics.sh --list --zookeeper 172.17.0.1:2181
-OR
+# OR
 docker run --rm wurstmeister/kafka kafka-topics.sh --list --zookeeper 172.17.0.1:2181
 
 # Create topic (Producer side)
@@ -32,9 +32,9 @@ docker run --rm wurstmeister/kafka kafka-topics.sh --list --zookeeper 172.17.0.1
 OR
 docker run --rm wurstmeister/kafka kafka-topics.sh --create --topic INDvsPAK --replication-factor 1 --partitions 1 --zookeeper 172.17.0.1:2181
 
-https://linuxhint.com/docker_compose_kafka/
+# https://linuxhint.com/docker_compose_kafka/
 
-# Broker list
+# Create publisher
 bash > kafka-console-producer.sh --broker-list <ip>:9092 --topic <topic name>
 
 # Create publisher
@@ -67,10 +67,6 @@ bin/zkCli.sh -server 172.17.0.1:2181
 
     # Exit the zookeeper server
     quit
-
-
-
-
 
 
 #  all container names and their IP addresses

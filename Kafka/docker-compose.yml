@@ -10,8 +10,9 @@ services:
     image: wurstmeister/kafka
     ports:
       - "9092:9092"
+    hostname: kafkaIP
     environment:
-      KAFKA_ADVERTISED_HOST_NAME: 172.17.0.1
+      KAFKA_ADVERTISED_HOST_NAME: kafkaIP #172.17.0.1 
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: "test-topic:1:1" # 1 partition and 1 replica
 
@@ -20,13 +21,12 @@ services:
     ports:
       - "27017:27017"
     volumes:
-    - db-data:/data/db
-    - mongo-config:/data/configdb
+    - mongodb-data:/data/db
+    - mongodb-config:/data/configdb
 
 volumes:
-  db-data:
+  mongodb-data:
+    external: true
+  mongodb-config:
     external:
-      name: db-data
-  mongo-config:
-    external:
-      name: mongo-config
+      name: mongodb-config
