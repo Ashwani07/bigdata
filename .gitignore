@@ -8,3 +8,5 @@ sparkStreaming/.ipynb_checkpoints/StreamingSpark-checkpoint.ipynb
 kafkaStreaming/.ipynb_checkpoints/StreamingKafka-checkpoint.ipynb
 Spark/.ipynb_checkpoints/Learning PySpark-checkpoint.ipynb
 kafkaStreaming/__pycache__/credentials.cpython-37.pyc
+Kafka/kafka-commands.txt
+Kafka/docker-compose.1.yml

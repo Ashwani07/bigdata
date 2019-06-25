@@ -47,7 +47,7 @@ docker run --rm wurstmeister/kafka kafka-console-consumer.sh --topic INDvsPAK --
 docker exec -it kafka_zookeeper_1 bash
 
 # Connect to Zookeeper server
-bin/zkCli.sh -server 172.17.0.1:2181
+bin/zkCli.sh -server zookeeper:2181
 
     # List root
     ls /

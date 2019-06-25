@@ -3,8 +3,8 @@ import time
 import random
 from kafka import KafkaProducer
 
-# give broker IP from docker
-producer = KafkaProducer(bootstrap_servers='172.17.0.1:9092')
+# create producer. IP is of kafka docker container.
+producer = KafkaProducer(bootstrap_servers='172.19.0.3:9094')
 
 # continuous loop
 var = 1

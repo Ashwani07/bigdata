@@ -5,9 +5,9 @@ from kafka import KafkaConsumer
 var = 1
 while var == 1:
 
-    # initialize consumer to given topic and broker
+    # initialize consumer to given topic and broker. IP is of kafka docker container.
     consumer = KafkaConsumer('test-topic', group_id='consumer-1', \
-        bootstrap_servers='172.17.0.1:9092')
+        bootstrap_servers='172.19.0.3:9094')
 
     # loop and print messages
     for msg in consumer:
