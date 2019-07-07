@@ -1,10 +1,13 @@
-version: '3'
+version: '3.5'
 services:
 
   zookeeper:
     image: wurstmeister/zookeeper
     ports:
       - "2181:2181"
+    volumes:
+      - zookeeper-data:/opt/zookeeper-3.4.13/data
+      - zookeeper-conf:/opt/zookeeper-3.4.13/conf
   # We dont need to expose any port since both services will be running in 
   # same bridge network
 
@@ -21,3 +24,16 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: "test-topic:1:1" # 1 partition and 1 replica
+    volumes:
+      - kafka:/kafka
+
+volumes:
+  zookeeper-data:
+    external:
+      name: zookeeper-data
+  zookeeper-conf:
+    external:
+      name: zookeeper-conf
+  kafka:
+    external:
+      name: kafka
